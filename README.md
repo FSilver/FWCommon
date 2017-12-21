@@ -1,6 +1,4 @@
-# FWCommon
-#
-## FWItemsControlView 
+# FWItemsControlView 
 适用于UIScrollView，精准控制多页内容切换。与UIScrollView联动。另外还提供了Swift版本
 ##使用方法
 配置+创建+关联
@@ -28,10 +26,9 @@
         offset = offset/CGRectGetWidth(scrollView.frame);
         [_itemControlView endMoveToIndex:offset];
     }
-### 使用场景效果图
-![FWItemsControlView](https://github.com/FSilver/WJItemControlView/raw/master/demo.png)
 #
 # FWMonitor
+#
 实时性能监控，指标CPU、FPS、Memory、卡顿堆栈显示
 ## 使用方法
 ```
@@ -44,7 +41,8 @@ FWMonitorView *view = [FWMonitorView monitor];
 ###### 3 Memory: 程序当前占用内存。注意不是Xcode中直接看到的内存数据，而是和Profile中Activity Monitor检测到的内存数据一致。
 ###### 4 ANR: 监控程序在使用的过程中卡顿现象，并记录堆栈日志，保存到沙盒。 或者直接双击面板查看。
 #
-## FWProgressHUD
+# FWProgressHUD
+#
 ### Indicator only.
     FWProgressHUD *hud = [FWProgressHUD showHUDAddedTo:self.view];
     [hud hideAfterDelay:2.f];
@@ -68,6 +66,7 @@ FWMonitorView *view = [FWMonitorView monitor];
     [hud hideAfterDelay:2.f];    
 #
 # FWDrawView
+#
 富文本解析，包括表情，链接，电话号码，自定义链接。折行处理，边距处理等
 ## 使用方法
 三步，使用FWDrawConfig来进行配置，FWDrawParser提供解析方法，FWDrawView绘制富文本
@@ -124,25 +123,26 @@ FWMonitorView *view = [FWMonitorView monitor];
     {
         NSLog(@"单击");
     }
-    #
-    # FWCache
+#
+# FWCache
+#
 FWcache is used to storage key-pairs in memory and disk.
-## Disk
+#### Disk
 FWKDStorage is the base util for disk . When the data is more than 20kb, it saves the data in file. Else it saves the data in sqlite.
 FWDiskCache is a thread-safe cache that saved key-value paires by sqlite or file system. It based on FWKDStorage.
-## Memory
+#### Memory
 FWMemoryCahe is a thread-safe cache that saved key-value paires by NSDictionay.
 
-### Create
+#### Create
   FWCache *_cache;
   _cache = [[FWCache alloc]initWithName:@"FWCache2017"];
-### Save
+#### Save
   [_cache setObject:@"Object" forKey:@"A" withBlock:^{
                 NSLog(@"Object set finished : %d",i);
             }];
-### Select
+#### Select
   id object = [_cache objectForKey:@"A"];
-### Delete
+#### Delete
   [_cache removeObjectForKey:@"A" withBlock:^(NSString *key) {
             NSLog(@"key : %@ is removed",key);
         }];
