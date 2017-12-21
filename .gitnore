@@ -1,0 +1,8 @@
+xcsharedata/  
+xcuserdata/
+*.xcscmblueprint
+*.xcworkspacedata
+
+# Cocoapods
+Pods/
+
