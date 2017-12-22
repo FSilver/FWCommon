@@ -95,23 +95,23 @@ Pod::Spec.new do |s|
     cache.source_files = "FWCommon/Lib/FWCache/*.{h,m}" #子源的源文件地址
     cache.frameworks = 'UIKit'
   end
-  s.subspec 'FWCommon' do |carouselView|
+  s.subspec 'FWCarouselView' do |carouselView|
     carouselView.source_files = "FWCommon/Lib/FWCarouselView/*.{h,m}" #子源的源文件地址
     carouselView.frameworks = 'UIKit'
   end
-  s.subspec 'FWCommon' do |drawView|
+  s.subspec 'FWDrawView' do |drawView|
     drawView.source_files = "FWCommon/Lib/FWDrawView/*.{h,m}" #子源的源文件地址
     drawView.frameworks = 'UIKit'
   end
-  s.subspec 'FWCommon' do |monitor|
+  s.subspec 'FWMonitor' do |monitor|
     monitor.source_files = "FWCommon/Lib/FWMonitor/*.{h,m}" #子源的源文件地址
     monitor.frameworks = 'UIKit'
   end
-  s.subspec 'FWCommon' do |progressHUD|
+  s.subspec 'FWProgressHUD' do |progressHUD|
     progressHUD.source_files = "FWCommon/Lib/FWProgressHUD/*.{h,m}" #子源的源文件地址
     progressHUD.frameworks = 'UIKit'
   end
-  s.subspec 'FWCommon' do |segment|
+  s.subspec 'FWSegment' do |segment|
     segment.source_files = "FWCommon/Lib/FWSegment/*.{h,m}" #子源的源文件地址
     segment.frameworks = 'UIKit'
   end
