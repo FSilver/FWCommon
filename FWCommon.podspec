@@ -91,10 +91,39 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "FWCommon/Lib/*/*.{h,m}"
-  #s.exclude_files = "Classes/Exclude"
+  s.subspec 'FWCommon' do |cache|
+    cache.source_files = "FWCommon/Lib/FWCache/*.{h,m}" #子源的源文件地址
+    cache.frameworks = 'UIKit'
+  end
+  s.subspec 'FWCommon' do |carouselView|
+    carouselView.source_files = "FWCommon/Lib/FWCarouselView/*.{h,m}" #子源的源文件地址
+    carouselView.frameworks = 'UIKit'
+  end
+  s.subspec 'FWCommon' do |drawView|
+    drawView.source_files = "FWCommon/Lib/FWDrawView/*.{h,m}" #子源的源文件地址
+    drawView.frameworks = 'UIKit'
+  end
+  s.subspec 'FWCommon' do |monitor|
+    monitor.source_files = "FWCommon/Lib/FWMonitor/*.{h,m}" #子源的源文件地址
+    monitor.frameworks = 'UIKit'
+  end
+  s.subspec 'FWCommon' do |progressHUD|
+    progressHUD.source_files = "FWCommon/Lib/FWProgressHUD/*.{h,m}" #子源的源文件地址
+    progressHUD.frameworks = 'UIKit'
+  end
+  s.subspec 'FWCommon' do |segment|
+    segment.source_files = "FWCommon/Lib/FWSegment/*.{h,m}" #子源的源文件地址
+    segment.frameworks = 'UIKit'
+  end
 
-  # s.public_header_files = "Classes/**/*.h"
+
+
+
+  #s.source_files  = "FWCommon/Lib/**/*.{h,m}"
+
+  #s.exclude_files = "FWCommon/Lib"
+
+  #s.public_header_files = "FWCommon/Lib/**"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
